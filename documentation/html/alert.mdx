@@ -1,0 +1,403 @@
+---
+title: Tailwind CSS Alert - Material Tailwind
+description: Use our beautiful examples of alert component examples styled with Tailwind CSS to provide contextual feedback messages for typical user actions.
+navigation:
+  [
+    "alert",
+    "alert-variants",
+    "alert-colors",
+    "alert-with-icon",
+    "alert-with-list",
+    "alert-dismissible",
+    "custom-alert-close-icon",
+    "alert-with-content",
+    "alert-data-attributes",
+    "alert-trigger-data-attributes",
+    "required-script",
+  ]
+github: alert
+prev: accordion
+next: avatar
+---
+
+# Tailwind CSS Alerts
+
+Get started on your web projects with our Tailwind CSS alert which provides contextual feedback messages for typical user actions.
+
+An alert displays a short and important message attracting the user's attention without interrupting the user's task. Use this element when you need to show highly-important messages to users or when you need a persistent static container that is closable by user actions.
+
+Below we are presenting examples of alerts that you can use in your Tailwind CSS project. The examples come in different colors and styles so you can adapt them easily to your needs.
+
+<br />
+
+## Alert Examples:
+
+## Simple Alert
+This example of alert with white text and dark gray background creates a high contrast ratio that improves readability and attracts attention.
+
+<CodePreview
+  id="alert"
+  link="alert#alert"
+  component={<HTMLAlertExamples.AlertDefault />}
+>
+```html
+<div role="alert" class="relative block w-full px-4 py-4 text-base text-white bg-gray-900 rounded-lg font-regular"
+  style="opacity: 1;">
+  <div class="mr-12 ">A simple alert for showing message.</div>
+</div>
+```
+</CodePreview>
+
+---
+
+## Alert Variants
+
+The alert component comes with 3 different variants that you can change using the gradient classes.
+
+<CodePreview
+  id="alert-variants"
+  link="alert#alert-variants"
+  component={<HTMLAlertExamples.AlertVariants />}
+>
+```html
+  <div role="alert" class="relative flex w-full px-4 py-4 text-base text-white bg-gray-900 rounded-lg font-regular">
+    <div class="mr-12 ">A simple filled alert for showing message.</div>
+  </div>
+  <div role="alert"
+    class="relative flex w-full px-4 py-4 text-base text-white rounded-lg font-regular bg-gradient-to-tr from-gray-900 to-gray-800">
+    <div class="mr-12 ">
+      <span>A simple gradient alert for showing message.</span>
+    </div>
+  </div>
+  <div role="alert"
+    class="relative flex w-full px-4 py-4 text-base text-gray-900 border border-gray-900 rounded-lg font-regular">
+    <div class="mr-12 ">
+      <span>A simple outlined alert for showing message.</span>
+    </div>
+  </div>
+  <div role="alert"
+    class="relative flex w-full px-4 py-4 text-base text-gray-900 rounded-lg font-regular bg-gray-900/10">
+    <div class="mr-12 ">
+      <span>A simple ghost alert for showing message.</span>
+    </div>
+  </div>
+```
+</CodePreview>
+
+---
+
+## Alert Colors
+
+The alert component comes with 19 different colors that you can change using the color classes, below you can find some of the available colors.
+
+<CodePreview
+  id="alert-colors"
+  link="alert#alert-colors"
+   component={<HTMLAlertExamples.AlertColors />}
+>
+```html
+  <div
+    class="relative block w-full p-4 mb-4 text-base leading-5 text-white bg-blue-500 rounded-lg opacity-100 font-regular">
+    An info alert for showing message.
+  </div>
+  <div
+    class="relative block w-full p-4 mb-4 text-base leading-5 text-white bg-red-500 rounded-lg opacity-100 font-regular">
+    An error alert for showing message.
+  </div>
+  <div
+    class="relative block w-full p-4 mb-4 text-base leading-5 text-white bg-green-500 rounded-lg opacity-100 font-regular">
+    A success alert for showing message.
+  </div>
+  <div
+    class="relative block w-full p-4 mb-4 text-base leading-5 text-white bg-orange-500 rounded-lg opacity-100 font-regular">
+    A warning alert for showing message.
+  </div>
+```
+</CodePreview>
+
+---
+
+## Alert with Icon
+
+You can add an icon at the beginning of the alert component using the <Code>i</Code> tag.
+
+<CodePreview
+  id="alert-with-icon"
+  link="alert#alert-with-icon"
+  component={<HTMLAlertExamples.AlertIcon />}
+>
+```html
+<div role="alert" class="relative flex w-full px-4 py-4 text-base text-white bg-gray-900 rounded-lg font-regular">
+  <div class="shrink-0">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+      stroke="currentColor" class="w-6 h-6">
+      <path stroke-linecap="round" stroke-linejoin="round"
+        d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z">
+      </path>
+    </svg>
+  </div>
+  <div class="ml-3 mr-12">A simple alert with icon for showing message</div>
+</div>
+```
+</CodePreview>
+
+---
+
+
+## Alert with List
+
+You can add any element you want for the Alert component, below you can see an example of alert with a list inside.
+
+<CodePreview
+  id="alert-with-list"
+  link="alert#alert-with-list"
+  component={<HTMLAlertExamples.AlertWithList />}
+>
+```html
+<div class="flex flex-col w-full gap-2">
+  <div role="alert" class="relative flex w-full px-4 py-4 text-base text-white bg-gray-900 rounded-lg font-regular"
+    style="opacity: 1;">
+    <div class="shrink-0"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+        stroke="currentColor" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z">
+        </path>
+      </svg></div>
+    <div class="ml-3 mr-12">
+      <p class="block font-sans text-base antialiased font-medium leading-relaxed text-inherit">Ensure that these
+        requirements are met:</p>
+      <ul class="mt-2 ml-2 list-disc list-inside">
+        <li>At least 10 characters (and up to 100 characters)</li>
+        <li>At least one lowercase character</li>
+        <li>Inclusion of at least one special character, e.g., ! @ # ?</li>
+      </ul>
+    </div>
+  </div>
+  <div role="alert"
+    class="relative flex w-full px-4 py-4 text-base text-white rounded-lg font-regular bg-gradient-to-tr from-gray-900 to-gray-800"
+    style="opacity: 1;">
+    <div class="shrink-0"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+        stroke="currentColor" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z">
+        </path>
+      </svg></div>
+    <div class="ml-3 mr-12">
+      <p class="block font-sans text-base antialiased font-medium leading-relaxed text-inherit">Ensure that these
+        requirements are met:</p>
+      <ul class="mt-2 ml-2 list-disc list-inside">
+        <li>At least 10 characters (and up to 100 characters)</li>
+        <li>At least one lowercase character</li>
+        <li>Inclusion of at least one special character, e.g., ! @ # ?</li>
+      </ul>
+    </div>
+  </div>
+  <div role="alert"
+    class="relative flex w-full px-4 py-4 text-base text-gray-900 border border-gray-900 rounded-lg font-regular"
+    style="opacity: 1;">
+    <div class="shrink-0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+        class="w-6 h-6">
+        <path fill-rule="evenodd"
+          d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm8.706-1.442c1.146-.573 2.437.463 2.126 1.706l-.709 2.836.042-.02a.75.75 0 01.67 1.34l-.04.022c-1.147.573-2.438-.463-2.127-1.706l.71-2.836-.042.02a.75.75 0 11-.671-1.34l.041-.022zM12 9a.75.75 0 100-1.5.75.75 0 000 1.5z"
+          clip-rule="evenodd"></path>
+      </svg></div>
+    <div class="ml-3 mr-12">
+      <p class="block font-sans text-base antialiased font-medium leading-relaxed text-inherit">Ensure that these
+        requirements are met:</p>
+      <ul class="mt-2 ml-2 list-disc list-inside">
+        <li>At least 10 characters (and up to 100 characters)</li>
+        <li>At least one lowercase character</li>
+        <li>Inclusion of at least one special character, e.g., ! @ # ?</li>
+      </ul>
+    </div>
+  </div>
+  <div role="alert"
+    class="relative flex w-full px-4 py-4 text-base text-gray-900 rounded-lg font-regular bg-gray-900/10"
+    style="opacity: 1;">
+    <div class="shrink-0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+        class="w-6 h-6">
+        <path fill-rule="evenodd"
+          d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm8.706-1.442c1.146-.573 2.437.463 2.126 1.706l-.709 2.836.042-.02a.75.75 0 01.67 1.34l-.04.022c-1.147.573-2.438-.463-2.127-1.706l.71-2.836-.042.02a.75.75 0 11-.671-1.34l.041-.022zM12 9a.75.75 0 100-1.5.75.75 0 000 1.5z"
+          clip-rule="evenodd"></path>
+      </svg></div>
+    <div class="ml-3 mr-12">
+      <p class="block font-sans text-base antialiased font-medium leading-relaxed text-inherit">Ensure that these
+        requirements are met:</p>
+      <ul class="mt-2 ml-2 list-disc list-inside">
+        <li>At least 10 characters (and up to 100 characters)</li>
+        <li>At least one lowercase character</li>
+        <li>Inclusion of at least one special character, e.g., ! @ # ?</li>
+      </ul>
+    </div>
+  </div>
+</div>
+```
+</CodePreview>
+
+---
+
+
+## Alert Dismissible
+
+You can make an alert dismissible by adding the <Code>data-dismissible="alertName"</Code> data attribute to the alert element and the <Code>data-dismissible-target="{`alertName`}"</Code> data attribute to the element that you want to close the alert with.
+
+<CodePreview
+  id="alert-dismissible"
+  link="alert#alert-dismissible"
+  component={<HTMLAlertExamples.AlertDismissible />}
+>
+```html
+<div
+  role="alert"
+  class="relative flex w-full px-4 py-4 text-base text-white bg-gray-900 rounded-lg font-regular"
+  data-dismissible="alert"
+>
+  <div class="mr-12 ">A dismissible alert for showing message.</div>
+  <button
+    data-dismissible-target="alert"
+    class="!absolute  top-3 right-3 h-8 max-h-[32px] w-8 max-w-[32px] select-none rounded-lg text-center align-middle font-sans text-xs font-medium uppercase text-white transition-all hover:bg-white/10 active:bg-white/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+    type="button"
+  >
+    <span class="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        class="w-6 h-6"
+        stroke-width="2"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M6 18L18 6M6 6l12 12"
+        ></path>
+      </svg>
+    </span>
+  </button>
+</div>; 
+```
+</CodePreview>
+
+---
+
+## Custom Alert Close Icon
+
+You can use any DOM element as the alert closing icon.
+
+<CodePreview
+  id="custom-alert-close-icon"
+  link="alert#custom-alert-close-icon"
+  component={<HTMLAlertExamples.AlertCustomCloseIcon />}
+>
+```html
+<div 
+  data-dismissible="alert"
+  role="alert"
+  className="font-regular relative flex w-full rounded-lg bg-gradient-to-tr from-gray-900 to-gray-800 px-4 py-4 text-base text-white">
+  <div className="shrink-0">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-6 w-6">
+      <path fill-rule="evenodd"
+        d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003zM12 8.25a.75.75 0 01.75.75v3.75a.75.75 0 01-1.5 0V9a.75.75 0 01.75-.75zm0 8.25a.75.75 0 100-1.5.75.75 0 000 1.5z"
+        clip-rule="evenodd"></path>
+    </svg>
+  </div>
+  <div className="ml-3 mr-12">
+    Sorry, something went wrong please try again.
+  </div>
+  <button
+   data-dismissible-target="alert"
+    className="!absolute top-3 right-3 select-none rounded-lg py-2 px-4 text-center align-middle font-sans text-xs font-bold uppercase text-white transition-all hover:bg-white/10 active:bg-white/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+    type="button">
+    Close
+  </button>
+</div>  
+```
+</CodePreview>
+
+---
+
+## Alert with Content
+
+Use the example below to use an alert component with content elements like title and description.
+
+<CodePreview
+  id="alert-with-content"
+  link="alert#alert-with-content"
+  component={<HTMLAlertExamples.AlertWithContent />}
+>
+```html
+ <div
+  role="alert"
+  data-dismissible="alert"
+  class="relative flex w-full max-w-screen-md px-4 py-4 text-base text-white bg-gray-900 rounded-lg font-regular">
+  <div class="shrink-0">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+      <path fill-rule="evenodd"
+        d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z"
+        clip-rule="evenodd"></path>
+    </svg>
+  </div>
+  <div class="ml-3 mr-12">
+    <h5 class="block font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-white">
+      Success
+    </h5>
+    <p class="block mt-2 font-sans text-base antialiased font-normal leading-relaxed text-white">
+      I don't know what that word means. Im happy. But success, that
+      goes back to what in somebody's eyes success means. For me,
+      success is inner peace. That's a good day for me.
+    </p>
+  </div>
+  <button
+   data-dismissible-target="alert"
+    class="!absolute top-3 right-3 h-8 max-h-[32px] w-8 max-w-[32px] select-none rounded-lg text-center align-middle font-sans text-xs font-medium uppercase text-white transition-all hover:bg-white/10 active:bg-white/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+    type="button">
+    <span class="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6"
+        stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </span>
+  </button>
+</div>
+```
+</CodePreview>
+
+---
+
+## Alert Data Attributes
+
+<span id="alert-data-attributes" className="scroll-mt-48" />
+The following data attributes are available for alert element.
+
+| Attribute          | Description                                                                                                   |
+| ------------------ | ------------------------------------------------------------------------------------------------------------- |
+| `data-dismissible` | Set the alert dismissible name, it should be the same as the <br /> `data-dismissible-target` data attribute. |
+
+---
+
+## Alert Trigger Data Attributes
+
+<span id="alert-trigger-data-attributes" className="scroll-mt-48" />
+The following data attributes are available for alert trigger element (The element
+that you want to close the alert with).
+
+| Attribute                 | Description                                                                                                                                   |
+| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| `data-dismissible-target` | Hide the alert element that has the same value of `data-dismissible-target` <br /> data attribute for it's `data-dismissible` data attribute. |
+
+---
+
+## Required Script
+
+<span id="required-script" className="scroll-mt-56" />
+
+The alert component needs a required script file to work, you just need to add the below script file to the bottom of your html file.
+
+```html
+<!-- from node_modules -->
+<script src="node_modules/@material-tailwind/html@latest/scripts/dismissible.js"></script>
+
+<!-- from cdn -->
+<script src="https://unpkg.com/@material-tailwind/html@latest/scripts/dismissible.js"></script>
+```

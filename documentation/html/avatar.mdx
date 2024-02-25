@@ -1,0 +1,258 @@
+---
+title: Tailwind CSS Avatar - Material Tailwind
+description: Use our avatar component examples styled with Tailwind CSS to add a quick visual identification of users or people.
+navigation: ["avatar", "avatar-variants", "avatar-sizes", "avatar-with-border", "avatar-with-text", "avatar-stack", "best-practice"]
+github: avatar
+prev: alert
+next: badge
+---
+
+# Tailwind CSS Avatar
+
+Get started faster with Material Tailwind avatar component for web or mobile applications where user identification matters.
+
+The avatar is an important UI component that provides a quick visual identification of users/people. The avatar is usually used to portray people in social media apps, chat apps, and forums. 
+
+We created a series of avatar examples to help you build easier your application or website. All these exemples are styled with Tailwind CSS and based on Material Design. 
+
+Check them below.
+
+
+<br />
+
+## Avatar Examples:
+
+## Default Avatar
+Use our default example of placeholder for user profiles with Tailwind CSS classes for a responsive and rounded design.
+
+<CodePreview
+  id="avatar"
+  link="avatar#avatar"
+  component={<HTMLAvatarExamples.AvatarDefault />}
+>
+```html
+  <img
+    src="https://docs.material-tailwind.com/img/face-2.jpg"
+    alt="avatar"
+    class="relative inline-block h-12 w-12 !rounded-full  object-cover object-center"
+  />
+```
+</CodePreview>
+
+---
+
+## Avatar Variants
+
+See below how you can implement different shapes for your Material Tailwind avatar.
+
+<CodePreview
+  id="avatar-variants"
+  link="avatar#avatar-variants"
+  component={<HTMLAvatarExamples.AvatarVariants />}
+>
+```html
+     <img
+        src="https://docs.material-tailwind.com/img/face-2.jpg"
+        alt="avatar"
+        class="relative inline-block h-12 w-12 !rounded-full object-cover object-center"
+      />
+      <img
+        src="https://docs.material-tailwind.com/img/face-2.jpg"
+        alt="avatar"
+        class="relative inline-block object-cover object-center w-12 h-12 rounded-lg"
+      />
+      <img
+        src="https://docs.material-tailwind.com/img/face-2.jpg"
+        alt="avatar"
+        class="relative inline-block h-12 w-12 !rounded-none object-cover object-center"
+      />
+```
+</CodePreview>
+
+<br />
+
+The default or circular variant works great for social media platforms and chat applications. Rounded avatars can be used in business applications, professional networks, or team collaboration tools. The square variant works where a more formal tone is wanted (for example, in document management systems).
+
+---
+
+## Avatar Sizes
+
+See below how you can modify the size of your avatar from small (6x6) to large (110x110 pixels) using Tailwind CSS classes. This way, the avatar can be responsively scaled to fit different design contexts.
+
+<CodePreview
+  id="avatar-sizes"
+  link="avatar#avatar-sizes"
+  component={<HTMLAvatarExamples.AvatarSizes />}
+>
+```html
+      <img
+        src="https://docs.material-tailwind.com/img/face-2.jpg"
+        alt="avatar"
+        class="relative inline-block h-6 w-6 !rounded-full object-cover object-center"
+      />
+      <img
+        src="https://docs.material-tailwind.com/img/face-2.jpg"
+        alt="avatar"
+        class="relative inline-block h-9 w-9 !rounded-full object-cover object-center"
+      />
+      <img
+        src="https://docs.material-tailwind.com/img/face-2.jpg"
+        alt="avatar"
+        class="relative inline-block h-12 w-12 !rounded-full object-cover object-center"
+      />
+      <img
+        src="https://docs.material-tailwind.com/img/face-2.jpg"
+        alt="avatar"
+        class="relative inline-block h-[58px] w-[58px] !rounded-full object-cover object-center"
+      />
+      <img
+        src="https://docs.material-tailwind.com/img/face-2.jpg"
+        alt="avatar"
+        class="relative inline-block h-[74px] w-[74px] !rounded-full object-cover object-center"
+      />
+      <img
+        src="https://docs.material-tailwind.com/img/face-2.jpg"
+        alt="avatar"
+        class="relative inline-block h-[110px] w-[110px] !rounded-full object-cover object-center"
+      />  
+```
+</CodePreview>
+
+---
+
+## Avatar with Border
+
+Use the following example to create avatars with different border styles and shapes. Each avatar retains the <Code>object-cover</Code> and <Code>object-center</Code> classes to ensure the image fills the allotted space and remains centered, while the <Code>p-0.5</Code> provides a slight padding inside the border.
+
+<CodePreview
+  id="avatar-with-border"
+  link="avatar#avatar-with-border"
+  component={<HTMLAvatarExamples.AvatarWithBorder />}
+>
+```html
+  <img
+    src="https://docs.material-tailwind.com/img/face-2.jpg"
+    alt="avatar"
+    class="inline-block relative object-cover object-center !rounded-full w-12 h-12 border-2 border-gray-900 p-0.5"
+  />
+  <img
+    src="https://docs.material-tailwind.com/img/face-2.jpg"
+    alt="avatar"
+    class="inline-block relative object-cover object-center w-12 h-12 rounded-lg border-2 border-green-500 p-0.5"
+  />
+  <img
+    src="https://docs.material-tailwind.com/img/face-2.jpg"
+    alt="avatar"
+    class="inline-block relative object-cover object-center !rounded-none w-12 h-12 border-2 border-pink-500 p-0.5"
+  />
+```
+</CodePreview>
+
+---
+
+## Avatar with Text
+
+You can use avatar with other components as well. Our example below which includes typography shows how  to form a complete user identity block.
+
+<CodePreview
+  id="avatar-with-text"
+  link="avatar#avatar-with-text"
+  component={<HTMLAvatarExamples.AvatarWithText />}
+>
+```html
+  <div class="flex items-center gap-4">
+    <img src="https://docs.material-tailwind.com/img/face-2.jpg" alt="avatar"
+      class="inline-block relative object-cover object-center !rounded-full w-12 h-12" />
+    <div>
+      <h6 class="block font-sans text-base antialiased font-semibold leading-relaxed tracking-normal text-inherit">
+        Tania Andrew
+      </h6>
+      <p class="block font-sans text-sm antialiased font-normal leading-normal text-gray-700">
+        Web Developer
+      </p>
+    </div>
+  </div>
+  <div class="flex items-center gap-4">
+    <img src="https://docs.material-tailwind.com/img/face-2.jpg" alt="avatar"
+      class="relative inline-block object-cover object-center w-12 h-12 rounded-lg" />
+    <div>
+      <h6 class="block font-sans text-base antialiased font-semibold leading-relaxed tracking-normal text-inherit">
+        Tania Andrew
+      </h6>
+      <p class="block font-sans text-sm antialiased font-normal leading-normal text-gray-700">
+        Web Developer
+      </p>
+    </div>
+  </div>
+  <div class="flex items-center gap-4">
+    <img src="https://docs.material-tailwind.com/img/face-2.jpg" alt="avatar"
+      class="inline-block relative object-cover object-center !rounded-none w-12 h-12" />
+    <div>
+      <h6 class="block font-sans text-base antialiased font-semibold leading-relaxed tracking-normal text-inherit">
+        Tania Andrew
+      </h6>
+      <p class="block font-sans text-sm antialiased font-normal leading-normal text-gray-700">
+        Web Developer
+      </p>
+    </div>
+  </div>
+```
+</CodePreview>
+
+---
+
+
+## Avatar Stack
+
+Use this example to implement a horizontal stack of avatar images for representing multiple users in a shared space, like a group chat or website team section.
+
+<CodePreview
+  id="avatar-stack"
+  link="avatar#avatar-stack"
+  className="mt-4"
+  component={<HTMLAvatarExamples.AvatarStack />}
+>
+  ```html
+   <div className="flex items-center -space-x-4">
+      <img
+        alt="user 1"
+        src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1480&amp;q=80"
+        class="relative inline-block h-12 w-12 !rounded-full  border-2 border-white object-cover object-center hover:z-10 focus:z-10"
+      />
+      <img
+        alt="user 2"
+        src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1061&amp;q=80"
+        class="relative inline-block h-12 w-12 !rounded-full border-2 border-white object-cover object-center hover:z-10 focus:z-10"
+      />
+      <img
+        alt="user 3"
+        src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1288&amp;q=80"
+        class="relative inline-block h-12 w-12 !rounded-full border-2 border-white object-cover object-center hover:z-10 focus:z-10"
+      />
+      <img
+        alt="user 4"
+        src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1287&amp;q=80"
+        class="relative inline-block h-12 w-12 !rounded-full border-2 border-white object-cover object-center hover:z-10 focus:z-10"
+      />
+      <img
+        alt="user 5"
+        src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1760&amp;q=80"
+        class="relative inline-block h-12 w-12 !rounded-full border-2 border-white object-cover object-center hover:z-10 focus:z-10"
+      />
+    </div>
+  ```
+</CodePreview>
+
+
+---
+
+<span id="best-practice"></span>
+### Avatar implementation best practices for developers:
+
+• Make sure that the avatars are responsive, visible on various devices and screen sizes.<br/>
+• Use ALT text for accesibility and seo.<br/>
+• Optimize avatar images for fast loading (recommendation: JPEG/ WEBP for photos and SVG for icons)<br/>
+• Provide users with easy ways for uploading or modifying their avatars.<br/>
+• Use default avatar for new users.
+
+
